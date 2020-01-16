@@ -8,3 +8,5 @@ p.print_puzzle()
 cell = p.cells[0][0]
 #help(cell)
 cell.update_options(p.cells[0])
+new_group = [p.cells[i][0] for i in range(9)]
+cell.update_options(new_group)
