@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22b1a223-8573-45c7-b286-3e198ba98a00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_input/test_column_update.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_input/test_row_update.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/cell.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/cell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/group.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/puzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/puzzle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp_driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_input/test_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_input/test_update_cell_val_invalidPuzzle.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/group.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -46,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/puzzle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="319">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -124,12 +117,12 @@
         <option value="$PROJECT_DIR$/test_input/test_2.txt" />
         <option value="$PROJECT_DIR$/test_input/test_3.txt" />
         <option value="$PROJECT_DIR$/test_input/test_4.txt" />
-        <option value="$PROJECT_DIR$/classes/puzzle.py" />
         <option value="$PROJECT_DIR$/test_input/test_column_update" />
         <option value="$PROJECT_DIR$/test_input/test_column_update.txt" />
         <option value="$PROJECT_DIR$/temp_driver.py" />
         <option value="$PROJECT_DIR$/classes/cell.py" />
         <option value="$PROJECT_DIR$/classes/group.py" />
+        <option value="$PROJECT_DIR$/classes/puzzle.py" />
       </list>
     </option>
   </component>
@@ -286,13 +279,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39235127" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39235127" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19121814" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.19121814" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -363,16 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/puzzle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/temp_driver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -391,6 +374,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="113" selection-start-line="10" selection-start-column="113" selection-end-line="10" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/puzzle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

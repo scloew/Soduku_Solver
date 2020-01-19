@@ -17,7 +17,7 @@ class Puzzle:
         self.rows = [Group(self.cells[i]) for i in range(9)]
 
     def _build_square_group(self):
-        raise NotImplementedError #to do implement this
+        raise NotImplementedError #TODO implement this
 
     def print_puzzle(self):
         for index, row in enumerate(self.cells):
