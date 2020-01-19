@@ -1,7 +1,13 @@
 class Group:
 
-    def __init__(self):
-        self.cells = [None for _ in range(9)]
-        self.options = {str(i) for i in range(1, 10)}
+    def __init__(self, cells_list):
+        self.cells = cells_list
+        self.open = {str(i) for i in range(1, 10)} - {c.val for c in self.cells if c}
+
+    def print_options(self):
+        print(self.open)
+
+    def update_options(self):
+        raise NotImplementedError #TODO need to implement this for after cell takes value, need to update options
 
     #TODO need update cells, options

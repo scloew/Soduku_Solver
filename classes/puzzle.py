@@ -8,7 +8,16 @@ class Puzzle:
         self.cells = []
         with open(puzzle_file, 'r') as in_file:
             self.cells = [[Cell(v) for v in line if v != '\n'] for line in in_file.readlines()]
-            print(self.cells)
+        self._build_column_groups()
+
+    def _build_column_groups(self):
+        self.columns = [Group([self.cells[i][j] for j in range(9)]) for i in range(9)]
+
+    def _build_row_groups(self):
+        self.rows = [Group(self.cells[i]) for i in range(9)]
+
+    def _build_square_group(self):
+        raise NotImplementedError #to do implement this
 
     def print_puzzle(self):
         for index, row in enumerate(self.cells):
