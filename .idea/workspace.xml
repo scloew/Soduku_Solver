@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22b1a223-8573-45c7-b286-3e198ba98a00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test_input/test_square_update.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/puzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/puzzle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/cell.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/cell.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp_driver.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/cell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="110" lean-forward="true" selection-start-line="4" selection-start-column="110" selection-end-line="4" selection-end-column="110" />
+            <state relative-caret-position="170">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -26,17 +27,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
+            <state relative-caret-position="119">
+              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/puzzle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="272">
+              <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -45,25 +46,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp_driver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_input/test_building_squares.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_input/test_column_update.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="8" selection-end-column="9" />
@@ -72,10 +55,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_input/test_1.txt">
+        <entry file="file://$PROJECT_DIR$/test_input/test_square_update.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="9" />
+            <state relative-caret-position="136">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/temp_driver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -104,10 +96,12 @@
         <option value="$PROJECT_DIR$/test_input/test_column_update.txt" />
         <option value="$PROJECT_DIR$/test_input/test_1.txt" />
         <option value="$PROJECT_DIR$/test_input/test_building_squares.txt" />
-        <option value="$PROJECT_DIR$/temp_driver.py" />
-        <option value="$PROJECT_DIR$/classes/cell.py" />
         <option value="$PROJECT_DIR$/classes/group.py" />
         <option value="$PROJECT_DIR$/classes/puzzle.py" />
+        <option value="$PROJECT_DIR$/classes/cell.py" />
+        <option value="$PROJECT_DIR$/test_input/test_updating_square.txt" />
+        <option value="$PROJECT_DIR$/test_input/test_square_update.txt" />
+        <option value="$PROJECT_DIR$/temp_driver.py" />
       </list>
     </option>
   </component>
@@ -262,6 +256,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12888302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39235127" />
@@ -335,41 +330,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_input/test_building_squares.txt">
+    <entry file="file://$PROJECT_DIR$/classes/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_input/test_updating_square.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
+          <caret selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_input/test_square_update.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="110" lean-forward="true" selection-start-line="4" selection-start-column="110" selection-end-line="4" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp_driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
+        <state relative-caret-position="170">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/puzzle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="272">
+          <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_input/test_building_squares.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp_driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
         </state>
       </provider>
     </entry>
