@@ -1,12 +1,13 @@
 class Cell:
 
-    def __init__(self, value=None):
+    def __init__(self, value):
         self.val = value
-        self.options = set() if self.val == 0 else {str(i) for i in range(1, 10)} #TODO is the == 0 necessary?
+        self.options = set() if value != '0' else {str(i) for i in range(1, 10)} #TODO is the == 0 necessary?
 
     def update_options(self, group):
         self.options = self.options.intersection(group.options)
         if len(self.options) == 1:
+            print('hit this')
             self.val = self.options.pop()
             self.options = set()
             return True

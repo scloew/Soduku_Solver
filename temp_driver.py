@@ -36,9 +36,9 @@ p_newer = Puzzle(file)
 print()
 print('original puzzle\n')
 p_newer.print_puzzle()
-cell = p_newer.cells[0][0]
+cell = p_newer.cells[1][1]
 new_group = p_newer.squares[0]
 print(f'test group 3.square = {[c.val for c in new_group.cells]}') #TODO this group failing
 cell.update_options(new_group)
 print('updated puzzle\n')
-p_newer.print_puzzle() #TODO ummm..... why is puzzle changin??????
+p_newer.print_puzzle() #TODO ummm..... why is puzzle changing - top left cell changing value??????
