@@ -19,9 +19,8 @@ class Puzzle:
         """
         raise NotImplementedError #TODO implement solving algorithm
 
-
     def _build_column_groups(self):
-        self.columns = [Group([self.cells[i][j] for j in range(9)]) for i in range(9)]
+        self.columns = [Group([self.cells[j][i] for j in range(9)]) for i in range(9)]
 
     def _build_row_groups(self):
         self.rows = [Group(self.cells[i]) for i in range(9)]
@@ -33,8 +32,7 @@ class Puzzle:
                 temp_list = []
                 for y_index in range(0, 3):
                     temp_list += self.cells[y_index+3*off_set][x_index:x_index + 3]
-                self.squares.append(temp_list) #TODO nice list comprhension for this?
-
+                self.squares.append(Group(temp_list)) #TODO nice list comprhension for this?
 
     def print_puzzle(self):
         for index, row in enumerate(self.cells):
