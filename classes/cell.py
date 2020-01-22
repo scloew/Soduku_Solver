@@ -7,7 +7,6 @@ class Cell:
     def update_options(self, group):
         self.options = self.options.intersection(group.options)
         if len(self.options) == 1:
-            print('hit this')
             self.val = self.options.pop()
             self.options = set()
             return True
