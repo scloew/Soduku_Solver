@@ -67,3 +67,9 @@ cell.update_options(square_group)
 print(f'original square update cell options= {cell.options}; cell.val = {cell.val}')
 print('\nupdated puzzle\n')
 multi_check_puzzle.print_puzzle()
+
+print('\n*****\nChecking against easy puzzle\n*****\n')
+file = r'test_input\easy_puzzle.txt'
+test_puzzle = Puzzle(file)
+test_puzzle.print_puzzle() #TODO failing (0 ,7); setting value to 3 failing square check -> looks like it's checking previous sqare
+test_puzzle.solve_puzzle()
