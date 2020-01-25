@@ -18,35 +18,24 @@ class Puzzle:
         iterate through groups updating cells; when cell takes value, updata groups
         do while puzzle not solved. Will need to update process for handling guessing
         """
-        debug_count = 0 #TODO remove debug
-        while self.update_number != 0: #TODO doesn't handle guessing
+        debug_count = 1
+        while self.update_number != 0: #TODO doesn't handle guessing; or invalid puzzle
+            debug_count += 1
             for row_num in range(9):
                 for col_num in range(9):
-                    noticed = False
                     current_cell = self.cells[row_num][col_num]
                     did_update = current_cell.update_options(self.rows[row_num])
-                    if did_update:
-                        print('did update on row')
-                        noticed = True
                     did_update = did_update or current_cell.update_options(self.columns[col_num])
-                    if did_update and not noticed:
-                        print('did update on column')
-                        noticed = True
-                    did_update = did_update or current_cell.update_options(self._square_dict[(row_num % 3, col_num % 3)], True)
-                    if did_update and not noticed:
-                        print('did update on square')
-                    if did_update: #TODO somethign about this updating isn't working.... maybe mapping of square dictionary?
-                        print(f'did update with cell[{row_num}][{col_num}] taking value {current_cell.val}')
-                        input('break \n')
-                        self.print_puzzle()
+                    did_update = did_update or current_cell.update_options(self._square_dict[(int(row_num / 3), int(col_num / 3))])
+                    if did_update:
                         self.update_number -= 1
                         self.rows[row_num].update_options(current_cell.val)
                         self.columns[col_num].update_options(current_cell.val)
-                        self._square_dict[(row_num % 3, col_num % 3)].update_options(current_cell.val)
-            debug_count += 1
+                        self._square_dict[(int(row_num / 3), int(col_num / 3))].update_options(current_cell.val)
             if debug_count > 500:
-                print('FAIL!!!!!!!')
-                return 'Fail'
+                print('timeout')
+                return False
+
 
     def _build_column_groups(self):
         self.columns = [Group([self.cells[j][i] for j in range(9)]) for i in range(9)]
@@ -66,7 +55,6 @@ class Puzzle:
                 self.squares.append(Group(temp_list)) #TODO nice list comprhension for this?
                 self._square_dict.update({(off_set, row_offset):self.squares[-1]})
                 row_offset += 1
-
 
     def print_puzzle(self):
         for index, row in enumerate(self.cells):

@@ -4,12 +4,7 @@ class Cell:
         self.val = value
         self.options = set() if value != '0' else {str(i) for i in range(1, 10)} #TODO is the == 0 necessary?
 
-    def update_options(self, group, is_square = False):
-        if is_square:
-            print(f'cell has options: {self.options}')
-            print(f'group has options {group.options}')
-            print(f'group has value {[c.val for c in group.cells]}')
-            input('break point in cell')
+    def update_options(self, group):
         self.options = self.options.intersection(group.options)
         if len(self.options) == 1:
             self.val = self.options.pop()
