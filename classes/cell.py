@@ -1,3 +1,5 @@
+from ._contants import cell_status
+
 class Cell:
 
     def __init__(self, value):
@@ -5,10 +7,12 @@ class Cell:
         self.options = set() if value != '0' else {str(i) for i in range(1, 10)} #TODO is the == 0 necessary?
 
     def update_options(self, group):
+        if not self.options:
+            return False #Ugly safety check to avoid intersection with None
         self.options = self.options.intersection(group.options)
         if len(self.options) == 1:
             self.val = self.options.pop()
-            self.options = set()
-            return True
+            self.options = None
+            return cell_status.value_set
         return False #TODO don't love duplicate return statement in this case
                      #TODO do I want puzzle to check if cell needs to be updated -> think so
