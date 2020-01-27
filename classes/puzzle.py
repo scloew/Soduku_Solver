@@ -7,7 +7,7 @@ class Puzzle:
 
     def __init__(self, puzzle_file):
         self.cells = []
-        with open(puzzle_file, 'r') as in_file :
+        with open(puzzle_file, 'r') as in_file:
             self.cells = [[Cell(v) for v in line if v != '\n'] for line in in_file.readlines()]
         self.update_number = sum(1 for i in range(9) for j in range(9) if self.cells[i][j].val == '0')
         self._build_column_groups()
@@ -30,7 +30,7 @@ class Puzzle:
                 for y_index in range(0, 3):
                     temp_list += self.cells[y_index + 3 * off_set][x_index :x_index + 3]
                 self.squares.append(Group(temp_list))  # TODO nice list comprhension for this?
-                self._square_dict.update({(off_set, row_offset) : self.squares[-1]})
+                self._square_dict.update({(off_set, row_offset): self.squares[-1]})
                 row_offset += 1
 
     def solve_puzzle(self) :
@@ -39,26 +39,30 @@ class Puzzle:
         do while puzzle not solved. Will need to update process for handling guessing
         """
         debug_count = 1
-        while self.update_number != 0:  # TODO doesn't handle guessing; or invalid puzzle
+        puzzle_updated = True #TODO change how failure to update is handled
+        while self.update_number != 0 and puzzle_updated:  # TODO doesn't handle guessing; or invalid puzzle
             debug_count += 1
+            puzzle_updated = False
             for row_num in range(9):
                 for col_num in range(9):
                     did_update = False
-                    if self.cells[row_num][col_num].val == '0':
-                        did_update = self._check_updates(row_num, col_num)
-                    if did_update:  # TODO, this is clunky; better solution -> function?
+                    cell_updates = self._check_updates(row_num, col_num)
+                    puzzle_updated = (cell_status == {cell_status.no_change})
+                    if cell_status.value_set in cell_updates:
                         self._update_groups(row_num, col_num)
+                    # if cell_status.puzzle_error_found in cell_status:
+                    #     print('error found')
+                    #     input('break') #TODO getting puzzle error at wrong times - need to fix
             if debug_count > 500:
                 print('timeout')
                 return False
 
     def _check_updates(self, row_num, col_num):
-        cell = self.cells[row_num][col_num]
-        did_update = cell.update_options(self.rows[row_num]) == cell_status.value_set
-        did_update = did_update or (cell.update_options(self.columns[col_num]) == cell_status.value_set)
-        did_update = did_update or \
-                     cell.update_options(self._square_dict[(int(row_num/3), int(col_num/3))]) == cell_status.value_set
-        return did_update
+        cell, ret = self.cells[row_num][col_num], set()
+        ret.add(cell.update_options(self.rows[row_num]))
+        ret.add(cell.update_options(self.columns[col_num]))
+        ret.add(cell.update_options(self._square_dict[(int(row_num/3), int(col_num/3))]))
+        return ret
 
     def _update_groups(self, row_num, col_num):
         cell = self.cells[row_num][col_num]
