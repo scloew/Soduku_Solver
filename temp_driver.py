@@ -1,10 +1,11 @@
 from classes.puzzle import Puzzle
+from classes.puzzle_factory import build_puzzle
 
 
 def test_row_update():
     print('\n*****\nChecking against row\n*****\n')
     file = r'test_input\test_row_update.txt'
-    p = Puzzle(file)
+    p = build_puzzle(file)
     print('original puzzle\n')
     p.print_puzzle()
     print()
@@ -21,42 +22,40 @@ def test_row_update():
 def test_column_update():
     print('\n*****\nChecking against column\n*****\n')
     file = r'test_input\test_column_update.txt'
-    p_new = Puzzle(file)
+    p = build_puzzle(file)
     print('original puzzle\n')
-    p_new.print_puzzle()
+    p.print_puzzle()
     print()
-    cell = p_new.cells[0][0]
-    print(f'test group 2.row = {[c.val for c in p_new.rows[0].cells]}\n')
-    cell.update_options(p_new.rows[0])
-    new_group = p_new.columns[0]
+    cell = p.cells[0][0]
+    print(f'test group 2.row = {[c.val for c in p.rows[0].cells]}\n')
+    cell.update_options(p.rows[0])
+    new_group = p.columns[0]
     print(f'test group 2.column = {[c.val for c in new_group.cells]}\n')
     cell.update_options(new_group)
     print('\nupdated puzzle\n')
-    p_new.print_puzzle()
+    p.print_puzzle()
 
 
 def test_square_update():
     print('\n*****\nChecking against squares\n*****\n')
     file = r'test_input\test_square_update.txt'
-    p_newer = Puzzle(file)
+    p = build_puzzle(file)
     print()
     print('original puzzle\n')
-    p_newer.print_puzzle()
-    cell = p_newer.cells[1][1]
-    new_group = p_newer.squares[0]
+    p.print_puzzle()
+    cell = p.cells[1][1]
+    new_group = p.squares[0]
     print(f'test group 3.square = {[c.val for c in new_group.cells]}')
     cell.update_options(new_group)
     print('\nupdated puzzle\n')
-    p_newer.print_puzzle()
+    p.print_puzzle()
 
 
 def test_multi_group_update():
-    print('\n*****\nChecking update requiring row, column, and square\n*****\n') #TODO, this is the wrong way to do;
-                                                                                 #TODO start using pytest
+    print('\n*****\nChecking update requiring row, column, and square\n*****\n')
     file = r'test_input\test_row_column_update.txt'
-    multi_check_puzzle = Puzzle(file)
-    print()
-    print('original puzzle\n')
+    multi_check_puzzle = build_puzzle(file)
+    print('\noriginal puzzle\n')
     multi_check_puzzle.print_puzzle()
     cell = multi_check_puzzle.cells[4][4]
     row_group = multi_check_puzzle.rows[4]
@@ -79,7 +78,7 @@ def test_multi_group_update():
 
 def test_easy_puzzle(puzzle_file):
     print('\n*****\nChecking against easy puzzle\n*****\n')
-    test_puzzle = Puzzle(puzzle_file)
+    test_puzzle = build_puzzle(puzzle_file)
     test_puzzle.print_puzzle()
     print('\n%%%%\n%%%%\n')
     test_puzzle.solve_puzzle()
@@ -94,7 +93,7 @@ def test_easy_puzzles():
 def test_puzzle_update_trigger():
     print('\n*****\nChecking failure to update trigger\n*****\n')
     file = r'test_input\test_row_update.txt'
-    p = Puzzle(file)
+    p = build_puzzle(file)
     print('original puzzle\n')
     p.print_puzzle()
     print()
@@ -105,8 +104,15 @@ def test_puzzle_update_trigger():
 def test_invalid_puzzle():
     print('\n*****\nChecking invalid puzzle is caught\n*****\n')
     file = r'test_input\test_invalid_puzzle.txt'
-    p = Puzzle(file)
+    p = build_puzzle(file)
     p.solve_puzzle()
+
+
+def test_instantiate_by_puzzle():
+    print('\n*****\nChecking instantiating puzzle with a puzzle\n*****\n')
+    p_original = build_puzzle(r'test_input\easy_puzzle.txt')
+    p_copy = Puzzle([[c.val for c in row] for row in p_original.cells])
+    p_copy.print_puzzle()
 
 
 if __name__ == '__main__':
@@ -117,3 +123,4 @@ if __name__ == '__main__':
     test_easy_puzzles()
     test_puzzle_update_trigger()
     test_invalid_puzzle()
+    test_instantiate_by_puzzle()
