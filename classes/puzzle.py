@@ -38,9 +38,8 @@ class Puzzle:
         iterate through groups updating cells; when cell takes value, updata groups
         do while puzzle not solved. Will need to update process for handling guessing
         """
-        debug_count = 1
-        puzzle_updated = True #TODO change how failure to update is handled
-        while self.update_number != 0 and puzzle_updated:  # TODO doesn't handle guessing; or invalid puzzle
+        debug_count, puzzle_updated = 1, True
+        while self.update_number != 0 and puzzle_updated:  # TODO doesn't handle guessing
             debug_count += 1
             puzzle_updated = False
             for row_num in range(9):
@@ -53,7 +52,7 @@ class Puzzle:
                         self.print_puzzle()
                         print('\nerror found')
                         print(f'(row_num, col_num) == {(row_num, col_num)}')
-                        input('break') #TODO need to better handle this flag
+                        return False #TODO need to better handle this flag
             if debug_count > 500:
                 print('timeout')
                 return False

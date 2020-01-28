@@ -102,10 +102,18 @@ def test_puzzle_update_trigger():
     p.print_puzzle()
 
 
+def test_invalid_puzzle():
+    print('\n*****\nChecking invalid puzzle is caught\n*****\n')
+    file = r'test_input\test_invalid_puzzle.txt'
+    p = Puzzle(file)
+    p.solve_puzzle()
+
+
 if __name__ == '__main__':
-    #test_row_update()
-    #test_column_update()
-    #test_square_update()
-    #test_multi_group_update()
+    test_row_update()
+    test_column_update()
+    test_square_update()
+    test_multi_group_update()
     test_easy_puzzles()
     test_puzzle_update_trigger()
+    test_invalid_puzzle()
