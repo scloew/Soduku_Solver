@@ -45,17 +45,19 @@ class Puzzle:
             puzzle_updated = False
             for row_num in range(9):
                 for col_num in range(9):
-                    did_update = False
                     cell_updates = self._check_updates(row_num, col_num)
-                    puzzle_updated = (cell_status == {cell_status.no_change})
+                    puzzle_updated = puzzle_updated or (not cell_updates == {cell_status.no_change})
                     if cell_status.value_set in cell_updates:
                         self._update_groups(row_num, col_num)
-                    # if cell_status.puzzle_error_found in cell_status:
-                    #     print('error found')
-                    #     input('break') #TODO getting puzzle error at wrong times - need to fix
+                    if cell_status.puzzle_error_found in cell_updates:
+                        self.print_puzzle()
+                        print('\nerror found')
+                        print(f'(row_num, col_num) == {(row_num, col_num)}')
+                        input('break') #TODO need to better handle this flag
             if debug_count > 500:
                 print('timeout')
                 return False
+            #input('break ')
 
     def _check_updates(self, row_num, col_num):
         cell, ret = self.cells[row_num][col_num], set()
