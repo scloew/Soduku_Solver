@@ -7,7 +7,7 @@ class Cell:
         self.val = value
         self.options = None if value != '0' else {str(i) for i in range(1, 10)}
 
-    def update_options(self, group): #TODO remove debug
+    def update_options(self, group):
         if self.options is None:
             return status.no_change #TODO Ugly safety check to avoid intersection with None
         new_options = self.options.intersection(group.options)
@@ -20,7 +20,7 @@ class Cell:
             return status.no_change #TODO this shouldn't be necessary; should be covered by the first if
         else:
             self.options = new_options
-            return status.options_update #TODO don't love repeated return statement in this case
+            return status.options_update
 
     def set_val(self, val):
         self.val = val

@@ -4,6 +4,7 @@ from .cell import Cell
 from .group import Group
 from ._contants import status
 
+
 class Puzzle:
 
     def __init__(self, cells_values):
@@ -39,7 +40,7 @@ class Puzzle:
         :return cells with value if puzzle was solved, false otherwise
         """
         debug_count, puzzle_updated = 1, True
-        while self.update_number != 0 and puzzle_updated:  # TODO doesn't handle guessing
+        while self.update_number != 0 and puzzle_updated:
             debug_count += 1
             puzzle_updated = False
             for row_num in range(9):
@@ -49,13 +50,11 @@ class Puzzle:
                     if status.value_set in iteration_status:
                         iteration_status = iteration_status.union(self._update_groups(row_num, col_num))
                     if status.puzzle_error_found in iteration_status:
-                        self.print_puzzle()
                         return False, None #TODO need to better handle of this flag
             if not puzzle_updated:
                 if self._guess():
                     break
                 else:
-                    print('\nerror found on guess....')
                     return False, None
         return True, self.cells
 
@@ -76,24 +75,17 @@ class Puzzle:
 
     def _guess(self):
         _, row_num, col_num = min((self.cells[y][x].val, y, x) for y in range(9) for x in range(9))
-        print(f'cell to guess {(row_num, col_num)}')
         for option in self.cells[row_num][col_num].options:
             self.cells[row_num][col_num].set_val(option)
-            print('check update \n')
-            self.print_puzzle()
             guess_puzzle = Puzzle([[c.val for c in row] for row in self.cells])
-            print('\n&&&&\nnew puzzle\n&&&&\n')
-            guess_puzzle.print_puzzle()
             solved, new_cells = guess_puzzle.solve_puzzle()
             if solved:
                 self.cells = new_cells
-                self.print_puzzle()
                 return True
         self.cells[row_num][col_num] = '0'
         return False
 
     def print_puzzle(self):
-        print('\n') #TODO remove this
         for index, row in enumerate(self.cells):
             temp_str = ''.join([c.val for c in row])
             temp_line = '|'.join(a + b + c for a, b, c in zip(temp_str[::3], temp_str[1::3], temp_str[2::3]))

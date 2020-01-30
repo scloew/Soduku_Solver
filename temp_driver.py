@@ -110,7 +110,8 @@ def test_invalid_by_cell():
     print('\n*****\nChecking invalid puzzle by cell is caught\n*****\n')
     file = r'test_input\test_invalid_puzzle.txt'
     p = build_puzzle(file)
-    p.solve_puzzle()
+    is_invalid = p.solve_puzzle()
+    print(f'Puzzle valid = {is_invalid}')
 
 
 def test_invalid_by_group():
@@ -118,15 +119,18 @@ def test_invalid_by_group():
     p = build_puzzle(r'test_input\test_invalid_by_group.txt')
     p.print_puzzle()
     print('\n%%%%\nafter attempted solve puzzle\n%%%%\n')
-    p.solve_puzzle()
+    is_invalid = p.solve_puzzle()
+    print(f'Puzzle valid = {is_invalid}')
     p.print_puzzle()
 
 
 def test_instantiate_by_puzzle():
     print('\n*****\nChecking instantiating puzzle with a puzzle\n*****\n')
     p_original = build_puzzle(r'test_input\easy_puzzle.txt')
-    p_copy = Puzzle([[c.val for c in row] for row in p_original.cells])
+    p_original.print_puzzle()
     print('original puzzle\n')
+    p_copy = Puzzle([[c.val for c in row] for row in p_original.cells])
+    print('new puzzle\n')
     p_copy.print_puzzle()
 
 
@@ -145,12 +149,12 @@ def test_guess(file_name):
 
 
 if __name__ == '__main__':
-    # test_row_update()
-    # test_column_update()
-    # test_square_update()
-    # test_multi_group_update()
-    # test_easy_puzzles()
-    # test_puzzle_update_trigger()
-    # test_invalid_puzzle()
-    # test_instantiate_by_puzzle()
+    test_row_update()
+    test_column_update()
+    test_square_update()
+    test_multi_group_update()
+    test_easy_puzzles()
+    test_puzzle_update_trigger()
+    test_invalid_puzzle()
+    test_instantiate_by_puzzle()
     test_guessing()
