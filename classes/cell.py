@@ -12,8 +12,7 @@ class Cell:
             return status.no_change #TODO Ugly safety check to avoid intersection with None
         new_options = self.options.intersection(group.options)
         if len(new_options) == 1:
-            self.val = new_options.pop()
-            self.options = None
+            self.set_val(new_options.pop())
             return status.value_set
         elif new_options == set():
             return status.puzzle_error_found
@@ -22,4 +21,8 @@ class Cell:
         else:
             self.options = new_options
             return status.options_update #TODO don't love repeated return statement in this case
+
+    def set_val(self, val):
+        self.val = val
+        self.options = None
 

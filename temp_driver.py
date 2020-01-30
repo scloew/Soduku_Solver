@@ -130,12 +130,27 @@ def test_instantiate_by_puzzle():
     p_copy.print_puzzle()
 
 
+def test_guessing():
+    test_guess(r'test_input\test_easy_guess_2.txt')
+    test_guess(r'test_input\test_guess_blank_puzzle.txt')
+
+
+def test_guess(file_name):
+    print('\n*****\nChecking guessing\n*****\n')
+    p = build_puzzle(file_name)
+    p.print_puzzle()
+    print('\n%%%%\nafter attempted solve puzzle\n%%%%\n')
+    p.solve_puzzle()
+    p.print_puzzle()
+
+
 if __name__ == '__main__':
-    test_row_update()
-    test_column_update()
-    test_square_update()
-    test_multi_group_update()
-    test_easy_puzzles()
-    test_puzzle_update_trigger()
-    test_invalid_puzzle()
-    test_instantiate_by_puzzle()
+    # test_row_update()
+    # test_column_update()
+    # test_square_update()
+    # test_multi_group_update()
+    # test_easy_puzzles()
+    # test_puzzle_update_trigger()
+    # test_invalid_puzzle()
+    # test_instantiate_by_puzzle()
+    test_guessing()
