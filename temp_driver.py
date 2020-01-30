@@ -80,7 +80,7 @@ def test_easy_puzzle(puzzle_file):
     print('\n*****\nChecking against easy puzzle\n*****\n')
     test_puzzle = build_puzzle(puzzle_file)
     test_puzzle.print_puzzle()
-    print('\n%%%%\n%%%%\n')
+    print('\n%%%%\nsolved puzzle\n%%%%\n')
     test_puzzle.solve_puzzle()
     test_puzzle.print_puzzle()
 
@@ -102,16 +102,31 @@ def test_puzzle_update_trigger():
 
 
 def test_invalid_puzzle():
-    print('\n*****\nChecking invalid puzzle is caught\n*****\n')
+    test_invalid_by_cell()
+    test_invalid_by_group()
+
+
+def test_invalid_by_cell():
+    print('\n*****\nChecking invalid puzzle by cell is caught\n*****\n')
     file = r'test_input\test_invalid_puzzle.txt'
     p = build_puzzle(file)
     p.solve_puzzle()
+
+
+def test_invalid_by_group():
+    print('\n*****\nChecking invalid puzzle by group is caught\n*****\n')
+    p = build_puzzle(r'test_input\test_invalid_by_group.txt')
+    p.print_puzzle()
+    print('\n%%%%\nafter attempted solve puzzle\n%%%%\n')
+    p.solve_puzzle()
+    p.print_puzzle()
 
 
 def test_instantiate_by_puzzle():
     print('\n*****\nChecking instantiating puzzle with a puzzle\n*****\n')
     p_original = build_puzzle(r'test_input\easy_puzzle.txt')
     p_copy = Puzzle([[c.val for c in row] for row in p_original.cells])
+    print('original puzzle\n')
     p_copy.print_puzzle()
 
 

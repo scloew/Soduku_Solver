@@ -1,4 +1,4 @@
-from ._contants import cell_status
+from ._contants import status
 
 
 class Group:
@@ -10,5 +10,9 @@ class Group:
     def update_options(self, val): #TODO remove square debug
         #todo, will need to check for invalid puzzle here
         #if val not in self.options:
-        #    return cell_status.puzzle_error_found
-        self.options.remove(val)
+        #    return status.puzzle_error_found
+        try:
+            self.options.remove(val)
+            return status.group_updated
+        except KeyError:
+            return status.puzzle_error_found

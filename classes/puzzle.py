@@ -2,7 +2,7 @@ from copy import copy
 
 from .cell import Cell
 from .group import Group
-from ._contants import cell_status
+from ._contants import status
 
 class Puzzle:
 
@@ -44,11 +44,11 @@ class Puzzle:
             puzzle_updated = False
             for row_num in range(9):
                 for col_num in range(9):
-                    cell_updates = self._check_updates(row_num, col_num)
-                    puzzle_updated = puzzle_updated or (not cell_updates == {cell_status.no_change})
-                    if cell_status.value_set in cell_updates:
-                        self._update_groups(row_num, col_num)
-                    if cell_status.puzzle_error_found in cell_updates:
+                    iteration_status = self._check_updates(row_num, col_num)
+                    puzzle_updated = puzzle_updated or (not iteration_status == {status.no_change})
+                    if status.value_set in iteration_status:
+                        iteration_status = iteration_status.union(self._update_groups(row_num, col_num))
+                    if status.puzzle_error_found in iteration_status:
                         self.print_puzzle()
                         print('\nerror found')
                         print(f'(row_num, col_num) == {(row_num, col_num)}')
@@ -64,18 +64,19 @@ class Puzzle:
         return self.cells
 
     def _check_updates(self, row_num, col_num):
-        cell, ret = self.cells[row_num][col_num], set()
-        ret.add(cell.update_options(self.rows[row_num]))
-        ret.add(cell.update_options(self.columns[col_num]))
-        ret.add(cell.update_options(self._square_dict[(int(row_num/3), int(col_num/3))]))
-        return ret
+        cell, ret_statuses = self.cells[row_num][col_num], set()
+        ret_statuses.add(cell.update_options(self.rows[row_num]))
+        ret_statuses.add(cell.update_options(self.columns[col_num]))
+        ret_statuses.add(cell.update_options(self._square_dict[(int(row_num/3), int(col_num/3))]))
+        return ret_statuses
 
     def _update_groups(self, row_num, col_num):
-        cell = self.cells[row_num][col_num]
+        cell, ret_statuses = self.cells[row_num][col_num], set()
         self.update_number -= 1
-        self.rows[row_num].update_options(cell.val)
-        self.columns[col_num].update_options(cell.val)
-        self._square_dict[(int(row_num / 3), int(col_num / 3))].update_options(cell.val)
+        ret_statuses.add(self.rows[row_num].update_options(cell.val))
+        ret_statuses.add(self.columns[col_num].update_options(cell.val))
+        ret_statuses.add(self._square_dict[(int(row_num / 3), int(col_num / 3))].update_options(cell.val))
+        return ret_statuses
 
     def _guess(self):
         raise NotImplementedError
