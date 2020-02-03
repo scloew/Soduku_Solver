@@ -148,6 +148,16 @@ def test_guess(file_name):
     p.print_puzzle()
 
 
+def test_hard_puzzle():
+    p = build_puzzle(r'test_input\test_hard_puzzle.txt')
+    print('\n*****\nChecking hard puzzle\n*****\n')
+    print('original puzzle\n')
+    p.print_puzzle()
+    p.solve_puzzle()
+    print('solved puzzle\n')
+    p.print_puzzle()
+
+
 if __name__ == '__main__':
     test_row_update()
     test_column_update()
@@ -158,3 +168,4 @@ if __name__ == '__main__':
     test_invalid_puzzle()
     test_instantiate_by_puzzle()
     test_guessing()
+    test_hard_puzzle()
