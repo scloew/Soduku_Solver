@@ -6,7 +6,9 @@ from ._contants import status
 
 
 class Puzzle:
-
+    """
+    Represents puzzle providing a method to solve the puzzle
+    """
     def __init__(self, cells_values, logger=None):
         date = datetime.now().strftime("%m_%d_%Y-%H_%M_%S")
         self.logger = logger if logger else open(f'.\\logs\\{date}.log', 'a') #TODO logging is a little clunky

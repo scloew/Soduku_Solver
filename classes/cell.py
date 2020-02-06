@@ -2,7 +2,7 @@ from ._contants import status
 
 
 class Cell:
-
+    """represents one of the 81 entries in soduku puzzle"""
     def __init__(self, value):
         self.val = value
         self.options = None if value != '0' else {str(i) for i in range(1, 10)}

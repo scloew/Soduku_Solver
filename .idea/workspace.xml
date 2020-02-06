@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22b1a223-8573-45c7-b286-3e198ba98a00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_input/test_hard_puzzle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/steve.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/steve.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/_contants.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/_contants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/cell.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/cell.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/group.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/puzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/puzzle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp_driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/puzzle_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/puzzle_factory.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,26 +21,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/_contants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/cell.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="34">
+              <caret line="2" column="76" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classes/cell.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="26" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/puzzle_factory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/group.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/puzzle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="110" selection-start-line="11" selection-start-column="110" selection-end-line="11" selection-end-column="110" />
+            <state relative-caret-position="125">
+              <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="56" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -47,10 +67,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="58" selection-start-line="58" selection-end-line="58" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp_driver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="167" column="14" lean-forward="true" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="14" />
+            <state relative-caret-position="284">
+              <caret line="155" column="20" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="20" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -85,6 +114,7 @@
       <find>inpu</find>
       <find>print</find>
       <find>uess</find>
+      <find>set_val</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -113,18 +143,18 @@
         <option value="$PROJECT_DIR$/test_input/test_easy_guess_solutions.txt" />
         <option value="$PROJECT_DIR$/test_input/test_invalid_puzzle.txt" />
         <option value="$PROJECT_DIR$/puzzle_factory.py" />
-        <option value="$PROJECT_DIR$/classes/puzzle_factory.py" />
         <option value="$PROJECT_DIR$/test_input/easy_puzzle_3.txt" />
         <option value="$PROJECT_DIR$/test_input/test_invalid_by_group.txt" />
         <option value="$PROJECT_DIR$/test_input/test_easy_guess_2.txt" />
         <option value="$PROJECT_DIR$/test_input/test_row_update.txt" />
         <option value="$PROJECT_DIR$/test_input/test_guess_blank_puzzle.txt" />
-        <option value="$PROJECT_DIR$/classes/group.py" />
-        <option value="$PROJECT_DIR$/classes/cell.py" />
-        <option value="$PROJECT_DIR$/classes/_contants.py" />
         <option value="$PROJECT_DIR$/test_input/test_hard_puzzle.txt" />
         <option value="$PROJECT_DIR$/temp_driver.py" />
+        <option value="$PROJECT_DIR$/classes/group.py" />
+        <option value="$PROJECT_DIR$/classes/_contants.py" />
+        <option value="$PROJECT_DIR$/classes/puzzle_factory.py" />
         <option value="$PROJECT_DIR$/classes/puzzle.py" />
+        <option value="$PROJECT_DIR$/classes/cell.py" />
       </list>
     </option>
   </component>
@@ -139,7 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,6 +185,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,7 +307,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13681428" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13681428" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -285,7 +315,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.39235127" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.39235127" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.35410765" />
@@ -445,13 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_input/test_hard_puzzle.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -459,167 +482,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/puzzle_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/02_01_2020-19_17_56.log" />
     <entry file="file://$PROJECT_DIR$/logs/02_01_2020-19_17_55.log" />
     <entry file="file://$PROJECT_DIR$/logs/02_01_2020-19_17_24.log" />
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_02_37.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_02_06.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_03_02.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/cell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_08_55.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_07_10.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_08_29.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_09_32.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="170">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_10_26.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_10_51.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-4080" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_11_43.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-2023">
-          <caret line="136" selection-start-line="136" selection-end-line="146" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_15_01.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_15_25.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_16_16.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-2125">
-          <caret line="505" column="20" lean-forward="true" selection-start-line="505" selection-start-column="17" selection-end-line="505" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_23_59.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-12546" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_24_54.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="119">
-          <caret line="178" selection-start-line="178" selection-end-line="179" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_26_45.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="68">
-          <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_29_16.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-3502">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_02_37.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_02_06.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_03_02.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_08_55.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_07_10.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_08_29.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_09_32.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_10_26.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_10_51.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_11_43.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_15_01.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_15_25.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_16_16.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_23_59.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_24_54.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_26_45.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_29_16.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_28_37.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_32_27.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_46_41.log" />
+    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_48_41.log" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="986">
           <caret line="58" selection-start-line="58" selection-end-line="58" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_28_37.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="119">
-          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_32_27.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="54">
-          <caret line="7076" selection-start-line="7076" selection-end-line="7089" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/_contants.py">
+    <entry file="file://$PROJECT_DIR$/classes/group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/puzzle_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/temp_driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="167" column="14" lean-forward="true" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="14" />
+        <state relative-caret-position="284">
+          <caret line="155" column="20" selection-start-line="155" selection-start-column="20" selection-end-line="155" selection-end-column="20" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_46_41.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="207">
-          <caret line="898" selection-start-line="898" selection-end-line="900" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/02_02_2020-19_48_41.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-216815" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/puzzle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="110" selection-start-line="11" selection-start-column="110" selection-end-line="11" selection-end-column="110" />
+        <state relative-caret-position="125">
+          <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="56" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/_contants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="76" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="26" selection-end-column="27" />
         </state>
       </provider>
     </entry>
