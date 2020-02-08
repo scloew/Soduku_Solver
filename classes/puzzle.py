@@ -69,15 +69,14 @@ class Puzzle:
                 else:
                     return False, None
         if self.original:
-            self.logger.write(f'\n{"=" * 8}\nPUZZLE SOLVED\n{"=" * 8}\n\n')
-            self.logger.close()
+            self._close_log()
         return True, self.cells
 
     def _check_updates(self, row_num, col_num):
         cell, ret_statuses = self.cells[row_num][col_num], set()
-        ret_statuses.add(cell.update_options(self.rows[row_num]))
-        ret_statuses.add(cell.update_options(self.columns[col_num]))
-        ret_statuses.add(cell.update_options(self._square_dict[(int(row_num/3), int(col_num/3))]))
+        ret_statuses.add(cell.update_options(self.rows[row_num].options))
+        ret_statuses.add(cell.update_options(self.columns[col_num].options))
+        ret_statuses.add(cell.update_options(self._square_dict[(int(row_num/3), int(col_num/3))].options))
         return ret_statuses
 
     def _update_groups(self, row_num, col_num):
@@ -102,6 +101,10 @@ class Puzzle:
                 return True
         self.cells[row_num][col_num] = '0'
         return False
+
+    def _close_log(self):
+        self.logger.write(f'\n{"=" * 8}\nPUZZLE SOLVED\n{"=" * 8}\n\n')
+        self.logger.close()
 
     def print_puzzle(self):
         print(self.to_string())
