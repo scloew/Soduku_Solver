@@ -8,6 +8,11 @@ class Group:
         self.options = {str(i) for i in range(1, 10)} - {c.val for c in self.cells if c}
 
     def update_options(self, val):
+        """
+
+        :param val:
+        :return:
+        """
         try:
             self.options.remove(val)
             return status.group_updated

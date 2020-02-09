@@ -88,6 +88,12 @@ class Puzzle:
         return ret_statuses
 
     def _guess(self):
+        """
+        Avoid infinite loop of failing to update any cells/groups
+        by guessing cell value starting with cell with minimum number of options
+        and increasing until puzzle is solved
+        :return: True if puzzle has been solved, other wise false
+        """
         self.logger.write(f'\nGEUSSING CELL VALUE\n{"*" * 8}\n\n')
         _, row_num, col_num = min((self.cells[y][x].val, y, x) for y in range(9) for x in range(9))
         for option in self.cells[row_num][col_num].options:
@@ -106,9 +112,6 @@ class Puzzle:
         self.logger.write(f'\n{"=" * 8}\nPUZZLE SOLVED\n{"=" * 8}\n\n')
         self.logger.close()
 
-    def print_puzzle(self):
-        print(self.to_string())
-
     def to_string(self):
         ret = ''
         for index, row in enumerate(self.cells):
@@ -118,3 +121,6 @@ class Puzzle:
             if index in {2, 5}:
                 ret += ('-  ' * 8) + '\n'
         return ret
+
+    def print_puzzle(self):
+        print(self.to_string())
