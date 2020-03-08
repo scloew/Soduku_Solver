@@ -1,10 +1,10 @@
 from classes.puzzle import Puzzle
-from classes.puzzle_factory import build_puzzle
+from classes.puzzle_factory import build_puzzle_file
 
 
 def test_easy_puzzle(puzzle_file):
     print('\n*****\nChecking against easy puzzle\n*****\n')
-    test_puzzle = build_puzzle(puzzle_file)
+    test_puzzle = build_puzzle_file(puzzle_file)
     test_puzzle.print_puzzle()
     print('\n%%%%\nsolved puzzle\n%%%%\n')
     test_puzzle.solve_puzzle()
@@ -19,7 +19,7 @@ def test_easy_puzzles():
 def test_puzzle_update_trigger():
     print('\n*****\nChecking failure to update trigger\n*****\n')
     file = r'test_input\test_easy_guess.txt'
-    p = build_puzzle(file)
+    p = build_puzzle_file(file)
     print('original puzzle\n')
     p.print_puzzle()
     print()
@@ -35,14 +35,14 @@ def test_invalid_puzzle():
 def test_invalid_by_cell():
     print('\n*****\nChecking invalid puzzle by cell is caught\n*****\n')
     file = r'test_input\test_invalid_puzzle.txt'
-    p = build_puzzle(file)
+    p = build_puzzle_file(file)
     is_invalid = p.solve_puzzle()
     print(f'Puzzle valid = {is_invalid}')
 
 
 def test_invalid_by_group():
     print('\n*****\nChecking invalid puzzle by group is caught\n*****\n')
-    p = build_puzzle(r'test_input\test_invalid_by_group.txt')
+    p = build_puzzle_file(r'test_input\test_invalid_by_group.txt')
     p.print_puzzle()
     print('\n%%%%\nafter attempted solve puzzle\n%%%%\n')
     is_invalid = p.solve_puzzle()
@@ -52,7 +52,7 @@ def test_invalid_by_group():
 
 def test_instantiate_by_puzzle():
     print('\n*****\nChecking instantiating puzzle with a puzzle\n*****\n')
-    p_original = build_puzzle(r'test_input\test_easy_guess.txt')
+    p_original = build_puzzle_file(r'test_input\test_easy_guess.txt')
     p_original.print_puzzle()
     print('original puzzle\n')
     p_copy = Puzzle([[c.val for c in row] for row in p_original.cells])
@@ -67,7 +67,7 @@ def test_guessing():
 
 def test_guess(file_name):
     print('\n*****\nChecking guessing\n*****\n')
-    p = build_puzzle(file_name)
+    p = build_puzzle_file(file_name)
     p.print_puzzle()
     print('\n%%%%\nafter attempted solve puzzle\n%%%%\n')
     p.solve_puzzle()
@@ -75,7 +75,7 @@ def test_guess(file_name):
 
 
 def test_hard_puzzle():
-    p = build_puzzle(r'test_input\test_hard_puzzle.txt')
+    p = build_puzzle_file(r'test_input\test_hard_puzzle.txt')
     print('\n*****\nChecking hard puzzle\n*****\n')
     print('original puzzle\n')
     p.print_puzzle()
